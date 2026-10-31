@@ -1,0 +1,18 @@
+[project]
+name = "kr-daytrading-ai-tutorial"
+version = "0.1.0"
+description = "『AI로 검증하는 국내 주식 데이트레이딩 자동매매 따라하기』 예제 코드"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+    "websockets>=13",
+    "python-dotenv>=1.0",
+    "pandas>=2.2",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
