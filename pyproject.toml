@@ -8,6 +8,8 @@ dependencies = [
     "websockets>=13",
     "python-dotenv>=1.0",
     "pandas>=2.2",
+    "pyarrow>=15",
+    "duckdb>=1.0",
 ]
 
 [build-system]

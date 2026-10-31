@@ -24,6 +24,8 @@ python chapters/ch02_kiwoom_api/01_issue_token.py
 |---|---|---|
 | `src/kiwoom_api/` | 키움 REST·WebSocket 클라이언트 (토큰 캐시, 유량 제한 재시도, 연속조회) | 2장 |
 | `chapters/ch02_kiwoom_api/` | 토큰 발급, 기본정보·분봉 조회, 실시간 체결, 유량 제한 실습 | 02-4 ~ 02-6 |
+| `src/marketdata/` | 분봉 정규화·장 운영 캘린더, Parquet 저장소·DuckDB 질의, 품질 검사, VWAP·RVOL·상대강도 | 3장 |
+| `chapters/ch03_market_data/` | 1년치 분봉 수집·증분 갱신, DuckDB 질의, 품질 검사, 지표 계산 | 03-1 ~ 03-4 |
 
 장이 진행되면서 데이터 수집, 전략, 백테스트, LightGBM, 주문·위험관리 코드가 추가됩니다.
 
@@ -35,4 +37,6 @@ python chapters/ch02_kiwoom_api/01_issue_token.py
 
 ## 실행 확인 환경
 
-Python 3.12.3, requests 2.34.2, websockets 17.4, pandas 3.1.0, python-dotenv 1.2.4 (2026-10-31, 키움 REST API 모의투자)
+Python 3.12.3, requests 2.34.2, websockets 17.4, pandas 3.1.0, python-dotenv 1.2.4, pyarrow 26.0.0, duckdb 2.0.0 (2026-10-31, 키움 REST API 모의투자)
+
+수집한 분봉(`data/minute_*/`)은 저장소에 포함하지 않습니다. `chapters/ch03_market_data/01_collect.py`로 직접 받으세요.
